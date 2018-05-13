@@ -1,0 +1,474 @@
+% $Id: SGKPinfo.tex,v 1.2 2006/03/22 12:37:20 jsbien Exp jsbien $
+% dired !: htlatex ? "xhtml,uni-html4" " -cunihtf -utf8" 
+% jak zaznaczyæ wielko¶æ orygina³u?
+\documentclass[a4paper]{article}
+%\documentclass{article}
+\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+% Debian:
+% lmodern.sty z pakiety lmodern
+\usepackage{lmodern}
+% wymaga html.sty z latex2html (latex pliku nie widzi!)
+%\usepackage{html}
+\usepackage{hyperref}
+\usepackage{url}
+
+\usepackage{longtable}
+
+\newcommand{\nl}[2]{\Link[#2]{}{}#1\EndLink}
+\newcommand{\nll}[3]{\Link[#2]{#3}{}#1\EndLink}
+
+
+\def\htmlref#1#2{#1 \ref{#2}}
+
+% dictionary link
+% 1 tekst
+% 2 strona, dla JavaScipt powinna byæ 3 cyfrowa
+% 3 tom (dwucyfrowy plus ewentualnie litera)
+
+
+\newcommand{\dl}[3]{{\catcode`&=12\Link[../SGKP/SG#2.djvu?djvuopts&page=#3]{}{}#1\EndLink}
+  {\small(\jl{JavaScript}{#2}{#3})}} 
+    \def\jl#1#2#3{\HCode{<A HREF="javascript:showpg('../SGKP/SG#2.djvu page=tom#2-#3.djvu zoom=width')">#1</A>}} 
+
+\def\Java{Niektóre przegl±darki wymagaj±,
+  aby korzystaæ z dodatkowych odno¶ników oznaczonych ,,JavaScript''
+  wtedy, gdy s³ownik dostêpny jest lokalnie --- na p³ycie CD/DVD lub
+  skopiowany na dysk; nigdy nie ma jednak takiej potrzeby, je¶li u¿ywa siê
+  systemu Linux.}
+
+
+\title{\textbf{S³ownik Geograficzny\\ Królestwa Polskiego\\ i innych
+      krajów s³owiañskich}\\Wydanie elektroniczne
+    DjVuLibre\\\textit{Wersja druga}}
+
+\author{\nl{Biblioteka Uniwersytecka w
+    Warszawie}{http://www.buw.uw.edu.pl/} \\\nl{Katedra
+  Lingwistyki Formalnej UW}{http://www.klf.uw.edu.pl/}}
+
+%\date{12 sierpnia 2005~r.}
+%\date{13 marca 2005~r.}
+% SGKPindeks.tex,v 1.4 2006/03/14 13:31:04 jsbien Exp :
+\date{22 marca 2005~r.}
+
+
+\begin{document}
+\maketitle{}
+
+
+\HCode{%
+<script language="javascript" type="text/javascript">\Hnewline
+<!--\Hnewline
+function showpg(str){ \Hnewline
+        var doc;\Hnewline
+        doc = top.document; \Hnewline
+        doc.open(); \Hnewline
+        doc.write('<html><body>'); \Hnewline
+        doc.write('<embed src='+str+' type=image/x.djvu  width=100\% height=99\%><\/embed>'); \Hnewline
+        doc.write('<\/body><\/html>'); \Hnewline
+        doc.close(); \Hnewline
+}\Hnewline
+//-->\Hnewline
+</script>\Hnewline
+}
+
+
+Niniejsze wydanie nie wymaga konkretnego typu komputera, procesora czy
+systemu operacyjnego.  Jedynym wymaganiem jest dostêpno¶æ przegl±darki
+internetowej oraz dodatkowego modu³u obs³ugi formatu DjVu. Mo¿na
+równie¿ korzystaæ ze specjalnych przegl±darek plików DjVu.
+
+\textbf{Wydanie to zosta³o sporz±dzone na podstawie reprodukcji cyfrowej
+przygotowanej przez Sekcjê Dokumentów Wtórnych Biblioteki
+Uniwersyteckiej w Warszawie w pa¼dzierniku 2003~.}
+
+Wersjê wstêpn± wydania przygotowa³ w sierpniu 2005 r. \nl{Janusz S.
+  Bieñ}{http://www.mimuw.edu.pl/\string~jsbien/}. Indeksy zosta³y rozbudowane
+przez uczestników prowadzonego przez niego kursu internetowego
+\textit{S³owniki i encyklopedie w Internecie -- budowa i u¿ytkowanie}
+w semestrze zimowym roku 2005/2006. Aktualne wydanie przygotowali
+Janusz S. Bieñ i Katarzyna Poleszak.
+
+\section{Instrukcja u¿ytkowania}
+\label{sec:instr-uytk}
+
+
+
+Najlepszym sposobem dostêpu do s³ownika jest wykorzystanie dowolnej
+przegl±darki internetowej uzupe³nionej o wtyczkê obs³uguj±c± format
+DjVu. Mo¿na te¿ stosowaæ specjalne przegl±darki plików w tym formacie.
+Informacje o dostêpno¶ci tych programów podane s± w
+\htmlref{Dodatku}{sec:dodatek}.
+
+Przedstawimy tutaj podstawowe funkcje przegl±darek dokumentów w
+formacie DjVu. Przy okazji podamy wybrane skróty klawiaturowe i
+podstawowe funkcje myszy dla dwóch konkretnych przegl±darek.
+
+
+
+\subsection{Linux --- \texttt{djview}}
+\label{sec:linux-djview}
+\label{djview}
+
+% nie dzia³a:
+%\let\key\framebox
+%\let\key\textbf
+\def\key#1{\textbf{#1}}
+
+Niektóre funkcje realizowane s± przez kilka skrótów klawiaturowych, ni¿ej
+podajê tylko jeden, moim zadaniem najwygodniejszy.
+
+Skróty klawiaturowe niektórych funkcji mog± byæ zmieniane przez
+u¿ytkownika, podajê tutaj tylko warto¶ci domy¶lne.
+
+Prawy klawisz myszy uaktywnia menu. Zbli¿enie kursora myszy do dolnego
+brzegu ekranu ukazuje pasek narzêdzi.
+
+\begin{itemize}
+\item Skalowanie (ang. \textit{zoom})
+  \begin{itemize}
+  \item Skalowanie wzglêdne
+    \begin{itemize}
+    \item na szeroko¶æ strony: \key{w} (od angielskiego \textit{Fit \textbf{w}idth})
+    \item na rozmiar strony: \key{p} (od angielskiego \textit{Fit \textbf{p}age})
+    \end{itemize}
+  \item Skalowanie bezwzglêdne
+    \begin{itemize}
+    \item 100~\%: \key{1}
+    \item 200~\%: \key{2}
+    \item 300~\%: \key{3}
+% do sprawdzenia w ¼ród³ach!:
+    \item kolejno 150~\%, 300~\%, 450~\% itp.: \key{+}
+% do sprawdzenia w ¼ród³ach!:
+    \item kolejno 75~\%, 50~\%, 25~\% itp.: \key{-}
+    \end{itemize}
+  \item Lupa (ang. \textit{lens}): \key{Ctrl}
+\end{itemize}
+  \item Pozycjonowanie (ang. \textit{panning} i inne)
+    \begin{itemize}
+    \item Pocz±tek strony (górny lewy róg): \key{Home}
+    \item Koniec strony (dolny prawy róg): \key{End}
+    \item Przesuniêcie strony w dó³ (kursora w górê): \key{Up}
+    \item Przesuniêcie strony w górê (kursora w dó³): \key{Down}
+    \item Przesuniêcie strony w lewo (kursora w prawo): \key{Right}
+    \item Przesuniêcie strony w prawo (kursora w lewo): \key{Left}
+    \item Przesuniêcie strony mysz± w dowolnym kierunku po naci¶niêciu lewego klawisza
+    \end{itemize}
+  \item Przewijanie (ang. \textit{scrolling})
+    \begin{itemize}
+    \item Przewiniêcie do przodu (tekst w górê, kursor w dó³, w razie potrzeby przej¶cie do nastêpnej strony): \key{Space}
+    \item Przewiniêcie do ty³u (tekst w dó³, kursor w górê, w razie potrzeby przej¶cie do poprzedniej strony): \key{Backspace}
+    \end{itemize}
+  \item Nawigacja
+    \begin{itemize}
+    \item Nastêpna strona: \key{Page Down}
+    \item Poprzednia strona: \key{Page Up}
+    \item Wskazana strona: \key{g}
+    \item Pocz±tek dokumentu: \key{Ctrl} + \key{Home}
+    \item Koniec dokumentu: \key{Ctrl} + \key{End}
+    \end{itemize}
+  \item Obs³uga odno¶ników (ang. \textit{links})
+    \begin{itemize}
+    \item U¿ycie odno¶nika: pstrykniêcie lewym klawiszem myszy
+    \item Pokazanie wszystkich odno¶ników na stronie: \key{Shift}
+    \end{itemize}
+  \item Historia
+    \begin{itemize}
+% ``widok'' djvu.com.pl
+    \item Poprzedni widok: przycisk paska narzêdzi
+    \item Nastêpny widok: przycisk paska narzêdzi
+    \end{itemize}
+                                
+  \end{itemize}
+  
+  Nieco wiêcej informacji mo¿na znale¼æ w dokumentacji dystrybuowanej
+  razem z programem.
+
+\subsection{MS Windows --- \texttt{DjVuPlugin}}
+\label{sec:linux-djvum}
+
+
+\label{djvubrowser}
+
+Przegl±rka pracuje zawsze w jednym z trzech trybów, z których dla nas
+istotne s± dwa: pozycjonowania (ang. \textit{pan}) i skalowania
+(t³umaczenie swobodne, ang. \textit{select}).
+
+W trybie pozycjonowania (kursor myszy w kszta³cie rêki) przesuwanie
+myszy z wci¶niêtym lewym klawiszem powoduje przesuwanie obrazu strony
+w oknie; w tym trybie naci¶niêcie \key{Ctrl} uaktywnia lupê, czyli
+powiêkszenie fragmentu strony wskazanego przez kursor myszy.
+
+W trybie skalowania (kursor myszy w kszta³cie krzy¿yka) dwukrotnym
+klikniêciem lewym klawiszem zaznaczamy na stronie prostok±t, który
+nastêpnie zostanie powiêkszony.
+
+Prawy klawisz myszy uaktywnia menu, za pomoc± którego mo¿na m.in.
+zmieniæ tryb pracy z pozycjonowania na skalowanie i odwrotnie.  Ca³y
+czas jest widoczny pasek narzêdzi.
+
+Dodatkowo dostêpne s± skróty klawiaturowe.
+
+Niektóre funkcje realizowane s± przez kilka skrótów klawiaturowych, ni¿ej
+podajê tylko jeden, moim zadaniem najwygodniejszy.
+
+Skróty klawiaturowe niektórych funkcji mog± byæ zmieniane przez
+u¿ytkownika, podajê tutaj tylko warto¶ci domy¶lne.
+
+
+\begin{itemize}
+\item Skalowanie (ang. \textit{zoom})
+  \begin{itemize}
+  \item Skalowanie wzglêdne
+    \begin{itemize}
+ %   \item na szeroko¶æ strony: \key{w} (od angielskiego \textit{Fit \textbf{w}idth})
+    \item na szeroko¶æ strony: \key{w} (od angielskiego \textit{Fit \textbf{w}idth})
+ %   \item na rozmiar strony: \key{p} (od angielskiego \textit{Fit \textbf{p}age})
+    \item na rozmiar strony: \key{p} (od angielskiego \textit{Fit \textbf{p}age})
+    \end{itemize}
+  \item Skalowanie bezwzglêdne
+    \begin{itemize}
+%    \item 100~\%: \key{1}
+    \item 100~\%: \key{1}
+%    \item 200~\%: \key{2}
+    \item 150~\%: \key{2}
+%    \item 300~\%: \key{3}
+    \item 300~\%: \key{3}
+% do sprawdzenia w ¼ród³ach!:
+%    \item kolejno 150~\%, 300~\%, 450~\% itp.: \key{+}
+    \item kolejno 150~\%, 300~\%, 450~\% itp.: \key{+}
+% do sprawdzenia w ¼ród³ach!:
+%    \item kolejno 75~\%, 50~\%, 25~\% itp.: \key{-}
+    \item kolejno 75~\%, 50~\%, 25~\% itp.: \key{-}
+    \end{itemize}
+  \item Lupa (ang. \textit{lens}) --- tylko w trybie pozycjonowania:
+    \key{Ctrl}
+\end{itemize}
+  \item Pozycjonowanie (ang. \textit{panning} i inne)
+    \begin{itemize}
+%     \item Pocz±tek strony (górny lewy róg): \key{Home}
+%     \item Koniec strony (dolny prawy róg): \key{End}
+    \item Przesuniêcie strony w dó³ (kursora w górê): \key{Up}
+    \item Przesuniêcie strony w górê (kursora w dó³): \key{Down}
+    \item Przesuniêcie strony w lewo (kursora w prawo): \key{Right}
+    \item Przesuniêcie strony w prawo (kursora w lewo): \key{Left}
+    \item W trybie pozycjonowania: przesuniêcie strony mysz± w dowolnym kierunku po naci¶niêciu lewego klawisza 
+    \end{itemize}
+  \item Przewijanie (ang. \textit{scrolling})
+    \begin{itemize}
+%
+    \item Przewiniêcie do przodu (tekst w górê, kursor w dó³, w razie potrzeby przej¶cie do nastêpnej strony): \key{PageDown}
+%
+% Enter!
+    \item Przewiniêcie do ty³u (tekst w dó³, kursor w górê, w razie potrzeby przej¶cie do poprzedniej strony): \key{PageUp}
+    \end{itemize}
+  \item Nawigacja
+    \begin{itemize}
+%    \item Nastêpna strona: \key{Page Down}
+    \item Nastêpna strona: \key{Space}
+%    \item Poprzednia strona: \key{Page Up}
+    \item Poprzednia strona: \key{Backspace}
+%    \item Wskazana strona: \key{g}
+    \item Wskazana strona: \key{g}
+%    \item Pocz±tek dokumentu: \key{Ctrl} + \key{Home}
+    \item Pocz±tek dokumentu:  \key{Home}
+%    \item Koniec dokumentu: \key{Ctrl} + \key{End}
+    \item Koniec dokumentu: \key{End}
+    \end{itemize}
+  \item Obs³uga odno¶ników (ang. \textit{links})
+    \begin{itemize}
+    \item U¿ycie odno¶nika: ¶rodkowy klawisz myszy
+%    \item Pokazanie wszystkich odno¶ników na stronie: \key{Shift}
+    \end{itemize}
+  \item Historia
+    \begin{itemize}
+% ``widok'' djvu.com.pl
+    \item Poprzedni widok: \key{b}
+    \item Nastêpny widok: \key{v}
+    \end{itemize}
+                                
+  \end{itemize}
+
+% historia B V i w djview?
+
+  Wiêcej informacji mo¿na znale¼æ we wspomnianej w \htmlref{Dodatku}{sec:dodatek} instrukcji.
+
+
+
+\section{Tekst s³ownika}
+\label{sec:tekst-sownika}
+
+Odno¶niki prowadz± m.in. do co setnej strony; je¶li jednak na takiej
+stronie jest kontynuacja artyku³u has³owego ze stron poprzednich, to
+dodatkowy odno¶nik wskazuje równie¿ na pocz±tek tego artyku³u. W
+przypadku ci±gu artyku³ów has³owych o tym samym ha¶le dodatkowy
+odno¶nik wskazuje pocz±tek pierwszego artyku³u z ci±gu, a podstawowy
+odno¶nik jest oznaczony skrótem ``cd''.
+
+\Java{}
+
+\input SGKPindeks
+
+
+\section{Dodatek: Format DjVu}
+\label{sec:dodatek}
+
+Format \nl{DjVu}{http://pl.wikipedia.org/wiki/DjVu} (nazwa pochodzi od
+fracuskiego \textit{deja vu} i jest tak samo wymawiana) to format
+dokumentów i plików graficznych przeznaczony do ich wygodnego
+udostêpniania w Internecie. Staje siê on coraz bardziej popularny, w
+Polsce stosuje go m.in. \nl{Wielkopolska Biblioteka
+  Cyfrowa}{http://www.wbc.poznan.pl/dlibra/help?id=tech-info}.  Inne
+przyk³ady zastosowañ mo¿na znale¼æ pod adresami
+\url{http://www.djvuzone.org/links/index.html} i
+\url{http://www.djvu.com.pl/zastosowania.php}.
+
+\nl{DjVuLibre}{http://sourceforge.net/projects/djvu/} to projekt
+po¶wiêcony stworzeniu oprogramowania do tworzenia i przegl±dania
+dokumentów w tym formacie, dostêpnego na zasadach 
+% By³ jaki¶ lepszy odno¶nik!:
+\nl{licencji
+  GNU}{http://www.gnu.org/licenses/licenses.pl.html}, czyli tzw.
+,,oprogramowania swobodnego''. Oprogramowanie swobodne jest nie tylko
+bezp³atne, ale mo¿na je m.in. swobodnie rozpowszechniaæ.
+
+Dokumenty w formacie DjVu ogl±da siê najczê¶ciej za pomoc±
+przegl±darki internetowej uzupe³nionej o odpowiedni± wtyczkê. Mo¿na
+te¿ stosowaæ specjalne przegl±darki plików w tym formacie. Zarówno
+wtyczki, jak i specjalne przegl±darki dostêpne s± bezp³atnie.
+
+W systemach Linux odpowiednie programy z regu³y wchodz± w sk³ad
+oficjalnych dystrybucji i instaluje siê je w standardowy sposób.
+Korzystanie z typowej dla tego systemu wtyczki, a mianowicie
+omówionego wcze¶niej programu \htmlref{\texttt{djview}}{djview}, ilustruj±
+obrazy ekranów dostêpne pod adresem
+\url{http://djvulibre.djvuzone.org/screenshots.html}.
+
+Dla systemów MS Windows programy do obs³ugi formatu DjVu mo¿na pobraæ
+z Internetu. Licencje niektórych z nich pozwalaj± na ich swobodn±
+redystrybucjê.
+
+% http://www.bg.pwr.wroc.pl/download/DjVuBrowserPlugin45.exe
+
+Dla u¿ytkowników MS Windows 98 lub nowszych przeznaczona jest wtyczka
+\textit{DjVu Browser Plugin for Windows}, dalej oznaczana krótko
+\htmlref{\texttt{DjVuBrowser}}{djvubrowser}, do pobrania m.in.  ze
+strony producenta
+ \begin{quote}
+% \small
+% \footnotesize
+% \scriptsize
+  \url{http://www.lizardtech.com/download/dl_download.php?detail=doc_djvu_plugin&platform=win},
+\end{quote}
+lub dystrybutora
+\begin{quote}
+  \url{http://www.djvu.com.pl/download.php}
+\end{quote}
+
+Na wskazanej wy¿ej stronie polskiego dystrybutora dostêpna jest
+równie¿ dokumentacja w jêzyku polskim.
+
+% Po zainstalowaniu wtyczki mo¿na sprawdziæ jej dzia³anie m.in. na
+% przyk³adach znajduj±cych siê w katalogu
+% \begin{quote}
+%   \verb|Program Files\LizardTech\|
+% \end{quote}
+                                % dodaæ warunki!
+%\path{Program Files\LizardTech\DjVu Control 4.5\Examples\}.
+    
+Kopia najnowszej wersji
+\nl{wtyczki}{../MSWindows/DjVuBrowserPlugin6_1107.exe} i jej
+\nl{polskiej
+  dokumentacji}{../MSWindows/djvu_plugin_manual_pl/directory.djvu} (w
+formacie DjVu) jest tak¿e dostêpna lokalnie. Poniewa¿ producent nie
+udostêpnia ju¿ wtyczki w \nl{wersji
+  4.5}{../MSWindows/DjVuBrowserPlugin45.exe}, nadaj±cej siê dla MS
+Windows 95, jest ona równie¿ udostêpniona lokalnie.
+
+Pe³ny wykaz bezp³atnych programów do obs³ugi formatu DjVu znajduje siê
+pod adresem \url{http://djvulibre.djvuzone.org/}.
+
+Istniej± dwie odmiany formatu DejaVu, które nazywamy umownie
+\textit{DjVu Web} i \textit{DjVu}. Pierwszy z nich jest wygodniejszy,
+kiedy chcemy szybko obejrzeæ tylko wybrane strony dokumentu, drugi
+lepiej stosowaæ, kiedy chcemy zapoznaæ siê z ca³ym dokumentem.
+Odno¶niki na stronach WWW mog± wskazywaæ zarówno ca³e dokumenty, jaki
+ich konkretne strony.
+
+W systemie MS Windows standardowe odno¶niki do konkretnych stron nie
+dzia³aj±, gdy zawieraj±ce je strony i wskazane dokumenty pobierane s±
+lokalnie z dysku. Problem ten obchodzi siê stosuj±c tzw. Javascript,
+co ma jednak pewne wady --- np. obs³uga Javascript, choæ dostêpna we
+wszystkich przegl±darkach internetowych, mo¿e byæ wy³±czona ze
+wzglêdów bezpieczeñstwa. W rezultacie stosujemy niekiedy podwojone
+odno¶niki, odpowiednio je oznaczaj±c.
+% oznaczone odpowiednio ,,Linux'' (standardowy odno¶nik)i
+% ,,MS Windows'' (Javascript).
+
+
+
+\end{document}
+
+
+
+ Edyta Jurkiewicz  w dniu poniedzia³ek,  14 listopada 2005, 22:12 napisa³(a)
+---------------------------------------------------------------------
+czy je¿eli jaka¶ nazwa wystêpuje dwa (lub wiêcej) razy (bo jest nazw± np. góry
+i miejscowo¶ci) to w indeksie ma siê znale¼æ tyle samo razy co w s³owniku, czy
+mo¿e nale¿y jako¶ zaznaczyæ do czego odnosi siê dane has³o?
+
+ Janusz S. Bieñ  w dniu wtorek,  15 listopada 2005, 06:15 napisa³(a)
+---------------------------------------------------------------------
+Proszê potraktowaæ wszystkie takie has³a jako jedno i podaæ stronê, na której
+nazwa wystêpuje po raz pierwszy.
+
+================================================================================
+
+W±tpliwo¶æ odno¶nie przyk³adu
+ Adrian Wójcik  w dniu sobota,  12 listopada 2005, 17:23 napisa³(a)
+---------------------------------------------------------------------
+
+
+\textbf{Latyczów}&&\dl{s. 99}{05}{10}\\
+
+&&\dl{s. 100}{05}{101}\\"
+
+Do czego odnosi siê 10 na koñcu pierwszej linii? Nie powinno tam aby byæ 100?
+
+--------------------------------------------------------------------------------
+
+Odp: W±tpliwo¶æ odno¶nie przyk³adu
+ Janusz S. Bieñ  w dniu sobota,  12 listopada 2005, 17:56 napisa³(a)
+---------------------------------------------------------------------
+Ma Pan racjê, do przyk³adu wkrad³a siê pomy³ka, powinno byæ 100. Ju¿
+poprawi³em.
+
+================================================================================
+
+ Ewa Walasek  w dniu pi±tek,  11 listopada 2005, 14:42 napisa³(a)
+---------------------------------------------------------------------
+W³asnie przes³a³am gotowe zadanie. Mam tylko jedn± w±tpliwo¶æ - tekst na s.101
+nie rozpoczyna siê od ¿adnego has³a, jest kontynuacj± z poprzedniej strony.
+
+================================================================================
+
+blad w pliku SGKPindeks.tex ?
+ Katarzyna Poleszak  w dniu ¶roda,  16 listopada 2005, 00:49 napisa³(a)
+
+================================================================================
+
+ Anna Bia³kowska  w dniu czwartek,  17 listopada 2005, 19:12 napisa³(a)
+---------------------------------------------------------------------
+Zauwa¿y³am, ¿e uzupe³nienia do literki £ odnosz± do uzupe³nieñ litery L, a
+uzupe³nienia litery ¯ odnosz± do pocz±tku litery ¯ w S³owniku. Trochê siê
+pogubi³am .. Bior±c pod uwagê sposób opracowania litery A, te dwa s±
+nieprawid³owe. Czy mam racjê?
+
+
+
+%%% Local Variables: 
+%%% coding: iso-8859-2
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
