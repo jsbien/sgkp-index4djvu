@@ -27,7 +27,7 @@ pełnotekstowego przeszukiwania słownika
 odsyła do wspomnianej wyżej dygitalizacji w e-BUW. Adaptacji dokonał
 Janusz S. Bień w maju 2018 r.
 
-Niniejsze repozytorium należy traktować jako osierocone, może one
+Niniejsze repozytorium należy traktować jako osierocone, może ono
 zostać przekazane osobom zainteresowanym dalszym rozwojem
 indeksu. Oczywiście osoby takie mogą również rozwijać indeks za pomocą
 kopii (fork) repozytorium.
