@@ -14,7 +14,7 @@ W tym czasie nie istniały jeszcze indeksy do słownika w Wikipedii
 (https://pl.wikipedia.org/wiki/Słownik_geograficzny_Królestwa_Polskiego,,
 https://pl.wikipedia.org/wiki/Wikipedia:Skarbnica_Wikipedii/Słownik_geograficzny_Królestwa_Polskiego/Czym_się_to_je),
 a w każdym razie ani prowadzący ani uczestnicy o nich nie wiedzieli -
-wydaje się, że pojawiły się one dopiero w 2007r.
+wydaje się, że pojawiły się one dopiero w 2007 r.
 
 Dygitalizacja ta w 2017 r. została przeniesiona do e-BUW
 (http://ebuw.uw.edu.pl/publication/291971), ale bez indeksów.
