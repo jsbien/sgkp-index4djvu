@@ -1,11 +1,11 @@
 Repozytorium zawiera 2 wersje wyników zadań studenckich wykonanych w
 ramach ogólnouniwersyteckich zajęć internetowych 3322-SEWI-OG
 "Słowniki i encyklopedie w Internecie - budowa i użytkowanie", które
-prowadzili na Uniwersytecie Warszawskich Janusz S. Bień i Beata
+prowadzili na Uniwersytecie Warszawskim Janusz S. Bień i Beata
 Wójtowicz w semestrze zimowym 2005/2006.
 
 
-1. Wersja oryginalna stanowiła indeks do dygitalizacji "Słownika
+* Wersja oryginalna stanowiła indeks do dygitalizacji "Słownika
 geograficznego Królestwa Polskiego i innych krajów słowiańskich"
 dostępnej wówczas na nieistniejącej już witrynie "Komputery i
 Polszczyzna" (http://polszczyzna.mimuw.edu.pl).
@@ -14,12 +14,12 @@ W tym czasie nie istniały jeszcze indeksy do słownika w Wikipedii
 (https://pl.wikipedia.org/wiki/Słownik_geograficzny_Królestwa_Polskiego,,
 https://pl.wikipedia.org/wiki/Wikipedia:Skarbnica_Wikipedii/Słownik_geograficzny_Królestwa_Polskiego/Czym_się_to_je),
 a w każdym razie ani prowadzący ani uczestnicy o nich nie wiedzieli -
-wydaje się, ze pojawiły się one dopiero w 2007r.
+wydaje się, że pojawiły się one dopiero w 2007r.
 
 Dygitalizacja ta w 2017 r. została przeniesiona do e-BUW
 (http://ebuw.uw.edu.pl/publication/291971), ale bez indeksów.
 
-2. Wersja przystosowana do programu djview4poliqarp
+* Wersja przystosowana do programu djview4poliqarp
 (https://bitbucket.org/mrudolf/djview-poliqarp/,
 https://bitbucket.org/jsbien/ndt/); program ten daje również możliwość
 pełnotekstowego przeszukiwania słownika
