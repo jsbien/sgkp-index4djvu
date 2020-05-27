@@ -33,3 +33,5 @@ indeksu. Oczywiście osoby takie mogą również rozwijać indeks za pomocą
 kopii (fork) repozytorium.
 
 [Zrzut ekranu programu djview4poliqarp](SGKP-Hultaje.png)
+
+Wcześniej repozytorium znajdowalo się pod adresem https://bitbucket.org/jsbien/sgkp-index4djvu.
